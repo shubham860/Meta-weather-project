@@ -1,24 +1,21 @@
-$(document).ready(function(){
-  // Add smooth scrolling to all links
-  $("a").on('click', function(event) {
+function latilongi() {
+var location = document.getElementById('input').value;
+var url ='https://www.metaweather.com/api/location/search/?query=' + location + '';
 
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
+var request = new XMLHttpRequest();
+request.onreadystatechange = function() {
+   if (request.readyState == 4 && request.status == 200) {
+      var data = JSON.parse(request.responseText);
+         console.log(data);
 
-      // Store hash
-      var hash = this.hash;
+   }
+ };
+ request.open('GET',url,true);
+ request.send();
+ return true;
+}
 
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function(){
 
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
-});
+ function my(){
+document.getElementById('text').value="";
+}
