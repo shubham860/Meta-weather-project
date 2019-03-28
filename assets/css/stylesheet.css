@@ -1,0 +1,26 @@
+body {
+    font: 400 15px/1.8 Lato, sans-serif;
+    color: black;
+    width:100%;
+    height: 100%;
+    margin:0px;
+    padding:0px;
+    overflow-x: hidden;
+    background-color: #f3f8fa;
+    line-height: 1.42857143;
+  }
+
+#main{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border: 2px solid #E4E5E6;
+  border-radius: 10px;
+}
+.search{
+  background-color: #1a265c !important;
+  padding:35px;
+}
+
+.data{
+  background-color: white !important;
+}
